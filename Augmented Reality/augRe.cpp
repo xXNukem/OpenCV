@@ -54,7 +54,7 @@ int main(int argc, char* const* argv)
     /*Programa principal ...*/
 
     VideoCapture videoEntrada;
-    videoEntrada.open(video);
+    videoEntrada.open(0);
 
     if (!videoEntrada.isOpened())
     {

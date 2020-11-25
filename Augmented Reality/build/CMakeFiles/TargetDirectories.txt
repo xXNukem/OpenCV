@@ -1,0 +1,3 @@
+/home/carlos/Escritorio/GitKraken/OpenCV/Augmented Reality/build/CMakeFiles/rebuild_cache.dir
+/home/carlos/Escritorio/GitKraken/OpenCV/Augmented Reality/build/CMakeFiles/augRe.dir
+/home/carlos/Escritorio/GitKraken/OpenCV/Augmented Reality/build/CMakeFiles/edit_cache.dir

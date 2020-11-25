@@ -1,27 +1,19 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
-#Version del programa minima requerida
-PROJECT(cv_tutorial)
-#nombre del proyecto
-FIND_PACKAGE(OpenCV 	REQUIRED )
-#en el sistema debe estar instalado el paquete CV para que se pueda encontrar
-include_directories ("${OpenCV_INCLUDE_DIRS}")
-#Required for uco thinstation. May not be required in your own pc
-SET(CMAKE_CXX_FLAGS " -D_GLIBCXX_USE_CXX11_ABI=0 -m32")
-#Esto se pone para que funcione en esta configuracion particular
-LINK_LIBRARIES(${OpenCV_LIBS} )
-add_executable(augRe augRe.cpp)
+cmake_minimum_required(VERSION 3.10)
+project( hello_world_opencv )
+find_package( OpenCV REQUIRED )
 
- 
-#Para crear los archivos necesarios:
-#Crear una carpeta que se llame build
-#escribir cmake y la ruta al directorio de configuracion
-#escribir make
+#SET(OpenCV_DIR /home/carlos/Escritorio/installation/OpenCV-master/lib/cmake/opencv4)
 
-#para ejecutar los programas:
-#entramos en la carpeta build y ejecutamos los programas como se ha echo toda la vida
+#add_executable( hello_world_opencv hello_world_opencv.cpp )
+#target_link_libraries( hello_world_opencv ${OpenCV_LIBS})
 
-#Instrucciones practica1
-#clacular histograma h
-#acumular el histograma
-#h/F*C (acumulador normalizado para que esté entre 0 y 1, esto se hace con cada elemento)
-# g(x,y)=h''[ImagenEntrada(x,y)]*255
+#---MODO DE USO
+#add_executable(nombre_proyecto fichero_codigo1.cpp fichero_codigo2.cpp ...)
+#target_link_libraries(nombre_proyecto ${OpenCV_LIBS})
+#---COMPILACION
+#Crear carpeta Build dentro de la carpeta del proyecto
+#Ejecutar cmake.. desde la carpeta build
+#Ejecutar make desde la carpeta build
+add_executable( augRe augRe.cpp )
+target_link_libraries( augRe ${OpenCV_LIBS})
+
